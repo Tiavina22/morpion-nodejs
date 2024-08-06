@@ -1,0 +1,5 @@
+# Onle dossier node_modules
+node_modules/
+
+# On le fichier package-lock.json
+package-lock.json

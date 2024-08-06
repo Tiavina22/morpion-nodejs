@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morpion</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="game">
+        <!-- Section pour créer une partie -->
+        <div id="create-room">
+            <h3>Créer une partie</h3>
+            <input type="text" id="createRoomName" placeholder="Nom de la partie" />
+            <input type="password" id="createRoomPassword" placeholder="Mot de passe" />
+            <button onclick="createRoom()">Créer</button>
+        </div>
+
+        <!-- Section pour rejoindre une partie -->
+        <div id="join-room">
+            <h3>Rejoindre une partie</h3>
+            <input type="text" id="joinRoomName" placeholder="Nom de la partie" />
+            <input type="password" id="joinRoomPassword" placeholder="Mot de passe" />
+            <button onclick="joinRoom()">Rejoindre</button>
+        </div>
+
+        <!-- Section pour afficher le tour du joueur -->
+        <div id="turn-display" class="hidden">
+            <h3>Tour de : <span id="current-player">O (Joueur 1)</span></h3>
+        </div>
+
+        <!-- Section pour afficher les informations du joueur -->
+        <div id="player-info">
+            <h3>Vous êtes le joueur : <span id="player-number">-</span></h3>
+        </div>
+
+        <!-- Plateau de jeu avec des boutons représentant chaque case -->
+        <div id="board" style="display:none;">
+            <button id="item1" onclick="choiseCase('item1')"></button>
+            <button id="item2" onclick="choiseCase('item2')"></button>
+            <button id="item3" onclick="choiseCase('item3')"></button>
+            <button id="item4" onclick="choiseCase('item4')"></button>
+            <button id="item5" onclick="choiseCase('item5')"></button>
+            <button id="item6" onclick="choiseCase('item6')"></button>
+            <button id="item7" onclick="choiseCase('item7')"></button>
+            <button id="item8" onclick="choiseCase('item8')"></button>
+            <button id="item9" onclick="choiseCase('item9')"></button>
+        </div>
+    </div>
+
+    <!-- Script pour intégrer Socket.IO -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- Script pour la logique de jeu en JavaScript -->
+    <script src="app/morpion.js"></script>
+</body>
+
+</html>
