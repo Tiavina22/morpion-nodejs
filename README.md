@@ -1,2 +1,1 @@
-Un simple jeux morpion avec nodejs, en utilisant le socket.io pour le fonctionnalité du multijoueurs.
-Pour jouer le jeux, il faut que le joueur numéro 1 créer la partie, et l'autre joueur numéro 2 lui réjoindre.
+A simple morpion game built with Node.js, featuring multiplayer functionality using Socket.io. Player 1 creates the game, and Player 2 joins to play.
